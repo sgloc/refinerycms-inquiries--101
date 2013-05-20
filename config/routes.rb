@@ -1,5 +1,7 @@
 Refinery::Application.routes.draw do
-  get 'sistema-para-locadora-de-veiculos/contato', :to => 'inquiries#new', :as => 'new_inquiry'
+  
+  match "/contact" => redirect("/sistema-para-locadora-de-veiculos/contato")
+  get '/sistema-para-locadora-de-veiculos/contato', :to => 'inquiries#new', :as => 'new_inquiry'
   resources :contact,
             :only => :create,
             :as => :inquiries,
