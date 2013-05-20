@@ -37,7 +37,7 @@ class InquiriesController < ApplicationController
 protected
 
   def find_page
-    @page = Page.find_by_link_url('/contact', :include => [:parts, :slugs])
+    @page = Page.find_by_link_url('sistema-para-locadora-de-veiculos/contato', :include => [:parts, :slugs])
   end
 
 end
