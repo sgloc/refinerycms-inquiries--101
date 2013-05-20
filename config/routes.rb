@@ -1,5 +1,5 @@
 Refinery::Application.routes.draw do
-  get '/contact', :to => 'inquiries#new', :as => 'new_inquiry'
+  get 'sistema-para-locadora-de-veiculos/contato', :to => 'inquiries#new', :as => 'new_inquiry'
   resources :contact,
             :only => :create,
             :as => :inquiries,
